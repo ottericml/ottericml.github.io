@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="OTTER: A Vision-Language-Action Model with Text-Aware Visual Feature Extraction that leverages frozen CLIP features for robust robot manipulation.">
+  <meta name="keywords" content="OTTER, Vision-Language-Action, VLA, CLIP, Robotics, Robot Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OTTER: A Vision-Language-Action Model</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./files/otter.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">🦦 OTTER: A Vision-Language-Action Model with Text-Aware Visual Feature Extraction</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser Section: Updated to include Figure 2 as the main visual -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- Replace video teaser with the OTTER Figure 2 image -->
+      <video src="files/otter_video.mp4" autoplay controls muted style="width:100%; max-height:500px; object-fit:contain;"></video>
+      <!-- <img src="./static/images/otter_figure2.png" alt="OTTER Model Architecture" style="width:100%; max-height:500px; object-fit:contain;"> -->
+      <!-- <h2 class="subtitle has-text-centered">
+        OTTER leverages text-aware visual feature extraction from a frozen CLIP encoder for robust robot manipulation.
+      </h2> -->
+    </div>
+  </div>
+</section>
+
+<!-- Abstract Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce OTTER, a novel vision-language-action model that predicts robotic actions by extracting task-relevant visual features using a frozen, pre-trained CLIP encoder. By selectively extracting text-aware visual tokens aligned with language instructions, OTTER preserves the rich semantic understanding of the pre-trained model, leading to significantly improved zero-shot generalization on unseen robot manipulation tasks over existing state-of-the-art VLAs.
+          </p>
+          <p>
+            OTTER circumvents the need to fine-tune the pre-trained vision-language model, maintaining robust semantic alignment while combining visual, language, and proprioceptive features through a policy transformer. We demonstrate OTTER's effectiveness through extensive experiments in both simulation and real-world scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="files/video_carousel_1-Compress 1080p.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="files/video_carousel_2-Compress 1080p.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="files/video_carousel_3-Compress 1080p.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="files/video_carousel_4-Compress 1080p.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="files/video_carousel_5-Compress 1080p.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="files/video_carousel_6-Compress 1080p.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="files/video_carousel_7-Compress 1080p.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="files/video_carousel_8-Compress 1080p.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="files/video_carousel_9-Compress 1080p.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="files/video_carousel_10-Compress 1080p.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="files/video_carousel_11-Compress 1080p.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="files/video_carousel_12-Compress 1080p.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Optional: Additional Sections such as Experiments, Visual Effects, etc. can be added similarly -->
+ <!-- Abstract Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>Simulation results on LIBERO</b> We evaluate OTTER and other baselines on 300 trials on in-distribution tasks in LIBERO Spatial/Object/Goal, and 100 trials on unseen tasks we constructed. The numbers marked with ∗ of are directly referred from the <a href="https://openvla.github.io/"></a>OpenVLA paper</a>. OTTER performs on par with existing VLAs on in-distribution tasks and significantly outperforms them on unseen objects and environment configurations.
+            <img src="files/simulation_results.png" alt="OTTER Results" style="width:100%; max-height:500px; object-fit:contain;">
+          </p>
+          <p>
+            <b>Real Robot Multi-primitive zero-shot generalization</b> We train models across four manipulation primitives (pouring, drawer manipulation, poking, and pick-and-place) with a total of 1,185 human tele-operated demonstration trajectories and evaluate them on 150 trials of completely unseen tasks within these primitives. The results further suggest that OTTER’s generalization capabilities can be enhanced through increased model capacity (OTTER-L) and pre-training on large robotic datasets (OTTER-OXE).
+          </p>
+          <p>
+            <img src="files/multi-primitive-real.png" alt="OTTER Results" style="width:100%; max-height:500px; object-fit:contain;">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>
